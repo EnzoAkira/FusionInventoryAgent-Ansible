@@ -8,12 +8,13 @@
     gpgcheck: yes
     gpgkey: "{{ gpgkey_copr }}"
     skip_if_unavailable: yes
-    enabled: yes
+    enabled: no
     state: present
 
 - name: Install Fusioninventory
   yum:
     name: "{{ packages }}"
+    enablerepo: "fusioninventory_agent,epel"
     state: latest
   vars:
     packages:
