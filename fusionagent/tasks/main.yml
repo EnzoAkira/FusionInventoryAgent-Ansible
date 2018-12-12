@@ -1,7 +1,7 @@
 ---
 - name: Add COPR repositories for FusionInventory
   yum_repository:
-    name: trasher-fusioninventory-agent
+    name: fusioninventory-agent
     description: Copr repo for fusioninventory-agent owned by trasher
     file: fusioninventory_agent
     baseurl: "{{ baseurl_copr }}"
@@ -14,7 +14,7 @@
 - name: Install Fusioninventory
   yum:
     name: "{{ packages }}"
-    enablerepo: "fusioninventory_agent,epel"
+    enablerepo: "fusioninventory-agent,epel"
     state: latest
   vars:
     packages:
