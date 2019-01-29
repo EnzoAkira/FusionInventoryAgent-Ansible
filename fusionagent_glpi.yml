@@ -1,4 +1,4 @@
-- name: Install FusionInventory
+- name: Install FusionInventory for GLPI
   hosts: master
   roles:
     - fusionagent
