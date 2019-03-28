@@ -1,3 +1,4 @@
 - name: Install FusionInventory for GLPI
+  hosts:  
   roles:
     - fusionagent
