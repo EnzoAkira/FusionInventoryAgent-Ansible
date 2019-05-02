@@ -29,11 +29,14 @@
     group: root
     mode: 0744
 
-- name: Add Fusioninventory to cron
+- name: Add fusioninventory-agent to Crontab
   cron:
-    name: Fusioninventory Agent
-    minute: 0
+    name: PATH
+    env: yes
+    value: /usr/sbin:/usr/bin:/sbin:/bin
+    weekday: 0-5
+    minute: 55
     hour: 23
     user: root
-    job: "/usr/bin/fusioninventory-agent"
-    cron_file: fusioninventory
+    job: "/usr/bin/fusioninventory-agent --wait=300"
+    cron_file: /etc/crontab

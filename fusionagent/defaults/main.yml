@@ -1,5 +1,5 @@
 ---
 baseurl_copr: https://copr-be.cloud.fedoraproject.org/results/trasher/fusioninventory-agent/epel-7-$basearch/
 gpgkey_copr: https://copr-be.cloud.fedoraproject.org/results/trasher/fusioninventory-agent/pubkey.gpg
-glpi_link: http://brunocruz-dev.go-contact.com:410/plugins/fusioninventory/
+glpi_link: http://telvent17.go-contact.com:410/plugins/fusioninventory/
 task: inventory

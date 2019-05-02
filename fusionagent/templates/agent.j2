@@ -1,22 +1,41 @@
 # fusioninventory agent configuration
 
-# Target definition options #
+# all defined values match default
+# all commented values are examples
+
+
+#
+# Target definition options
+#
+
+# send tasks results to an OCS server
+#server = http://server.domain.com/ocsinventory
+# send tasks results to a FusionInventory for GLPI server
 server = {{ glpi_link }}
 # write tasks results in a directory
-#local = /tmp
+local = /tmp
 
-# Task definition options #
+#
+# Task definition options
+#
+
 # disable software deployment tasks
 #no-task = deploy
 tasks = {{ task }}
 
-# Target scheduling options #
+#
+# Target scheduling options
+#
+
 # maximum delay before first target, in seconds
 delaytime = 3600
 # do not contact the target before next scheduled time
 lazy = 0
 
-# Inventory task specific options #
+#
+# Inventory task specific options
+#
+
 # do not list local printers
 # no-category = printer
 # allow to scan user home directories
@@ -32,11 +51,17 @@ force = 0
 # additional inventory content file
 additional-content =
 
-# Package deployment task specific options #
+#
+# Package deployment task specific options
+#
+
 # do not use peer to peer to download files
 no-p2p = 0
 
-# Network options #
+#
+# Network options
+#
+
 # proxy address
 proxy =
 # user name for server authentication
@@ -52,7 +77,10 @@ no-ssl-check = 0
 # connection timeout, in seconds
 timeout = 3600 
 
-# Web interface options #
+#
+# Web interface options
+#
+
 # disable embedded web server
 no-httpd = 0
 # network interface to listen to
@@ -62,21 +90,27 @@ httpd-port = 62354
 # trust requests without authentication token
 httpd-trust =
 
-# Logging options #
+#
+# Logging options
+#
+
 # Logger backend, either Stderr, File or Syslog (Stderr)
 logger = syslog
 # log file
-#logfile = /var/log/fusioninventory.log
+logfile = /var/log/fusioninventory.log
 # maximum log file size, in MB
-#logfile-maxsize = 5
+logfile-maxsize = 5
 # Syslog facility
 logfacility = LOG_DAEMON
 # Use color in the console
 color = 0
 
-# Execution mode options #
+#
+# Execution mode options
+#
+
 # add given tag to inventory results
-#tag = 
+tag = 
 # debug mode
 debug = 0
 
